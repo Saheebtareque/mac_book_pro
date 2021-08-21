@@ -3,6 +3,14 @@ function calculateTotal() {
     return total;
 }
 
+function getinput() {
+    const inputCoupon = document.getElementById('apply-input').value;
+    document.getElementById('apply-input').value = '';
+    return inputCoupon;
+
+
+}
+
 function featurePrice(product, price) {
     document.getElementById(product + '-price').innerText = price;
     const total = calculateTotal();
@@ -39,4 +47,20 @@ document.getElementById('delivery-regular').addEventListener('click', function (
 
 document.getElementById('delivery-standard').addEventListener('click', function () {
     featurePrice('delivery', 20);
+});
+
+
+
+document.getElementById('discount-btn').addEventListener('click', function () {
+
+    const couponInserted = getinput();
+    if (couponInserted == 'stevekaku') {
+        const discountPrice = parseInt(document.getElementById('final-price').innerText) * 0.8;
+        document.getElementById('final-price').innerText = discountPrice;
+        document.getElementById('discount-btn').style.display = 'none';
+
+
+
+    }
+
 });
