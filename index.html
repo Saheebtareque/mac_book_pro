@@ -23,21 +23,36 @@
             <div><img class="h-1/2" src="images/mac.png" alt=""></div>
             <div>
                 <h1 class="text-4xl font-semibold"> Customize your Blue 24-inch iMac with Apple m1 chip </h1>
-                <p class="mt-3 text-gray-600 text-justify ">Apple M1 chip with 8-core CPU with 4 performances cores and 4 efficiency
-                 cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt /
-                USB 4 ports Magic Mouse Magic Keyboard US English. </p>
+                <p class="mt-3 text-gray-600 text-justify ">Apple M1 chip with 8-core CPU with 4 performances cores and
+                    4 efficiency
+                    cores, 7-core GPU, and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt /
+                    USB 4 ports Magic Mouse Magic Keyboard US English. </p>
                 <h6 class="text-xl font-semibold my-3 ">Memory</h6>
-                <button class=" hover:bg-gray-900 hover:text-white px-2 py-1 border border-gray-700 text-sm">8GB unified Memory</button>
-                <button class=" hover:bg-gray-900 hover:text-white px-2 py-1 border border-gray-700 text-sm">16GB unified Memory</button>
+                <button id="memory-regular"
+                    class=" hover:bg-gray-900 hover:text-white px-2 py-1 border border-gray-700 text-sm">8GB unified
+                    Memory</button>
+                <button id="memory-standard"
+                    class=" hover:bg-gray-900 hover:text-white px-2 py-1 border border-gray-700 text-sm">16GB unified
+                    Memory</button>
 
                 <h6 class="text-xl font-semibold my-3 ">Storage</h6>
-                <button class=" hover:bg-gray-900 hover:text-white  px-2 py-1 border border-gray-700 text-sm">8GB unified Memory</button>
-                <button class=" hover:bg-gray-900 hover:text-white  px-2 py-1 border border-gray-700 text-sm">16GB unified Memory</button>
-                <button class=" hover:bg-gray-900 hover:text-white  px-2 py-1 border border-gray-700 text-sm">16GB unified Memory</button>
+                <button id="storage-regular"
+                    class=" hover:bg-gray-900 hover:text-white  px-2 py-1 border border-gray-700 text-sm">256GB SSD
+                    storage</button>
+                <button id="storage-standard"
+                    class=" hover:bg-gray-900 hover:text-white  px-2 py-1 border border-gray-700 text-sm">512GB SSD
+                    storage</button>
+                <button id="storage-special"
+                    class=" hover:bg-gray-900 hover:text-white  px-2 py-1 border border-gray-700 text-sm">1TB SSD
+                    storage</button>
 
                 <h6 class="text-xl font-semibold my-4 "> Choose your delivery option </h6>
-                <button class=" hover:bg-gray-900 hover:text-white  px-2 py-1 border border-gray-700 text-sm"> friday, Aug 25 FREE prime Delivery</button>
-                <button class=" hover:bg-gray-900 hover:text-white  px-2 py-1 border border-gray-700 text-sm">Friday,Aug 21 Delivery charge $20</button>
+                <button id="delivery-regular"
+                    class=" hover:bg-gray-900 hover:text-white  px-2 py-1 border border-gray-700 text-sm"> friday, Aug
+                    25 FREE prime Delivery</button>
+                <button id="delivery-standard"
+                    class=" hover:bg-gray-900 hover:text-white  px-2 py-1 border border-gray-700 text-sm">Friday,Aug 21
+                    Delivery charge $20</button>
 
                 <!-- Receipt section -->
                 <section class="w-1/2 mt-7">
@@ -46,9 +61,9 @@
                             <h6 class="text-lg font-semibold">Best price</h6>
                         </div>
                         <div>
-                            <h6 class="text-lg font-semibold">$<span>1299</span></h6>
+                            <h6 class="text-lg font-semibold">$<span id="base-price">1299</span></h6>
                         </div>
-            
+
                     </div>
 
                     <hr class=" mt-2 border-gray-300">
@@ -58,9 +73,9 @@
                             <h6 class="text-lg font-semibold">Extra Memory Cost</h6>
                         </div>
                         <div>
-                            <h6 class="text-lg font-semibold">$<span>0</span></h6>
+                            <h6 class="text-lg font-semibold">$<span id="memory-price">0</span></h6>
                         </div>
-            
+
                     </div>
 
                     <hr class=" mt-2 border-gray-300">
@@ -70,9 +85,9 @@
                             <h6 class="text-lg font-semibold">Extra Storage Cost</h6>
                         </div>
                         <div>
-                            <h6 class="text-lg font-semibold">$<span>0</span></h6>
+                            <h6 class="text-lg font-semibold">$<span id="storage-price">0</span></h6>
                         </div>
-            
+
                     </div>
 
                     <hr class=" mt-2 border-gray-300">
@@ -82,9 +97,9 @@
                             <h6 class="text-lg font-semibold">Delivery charge</h6>
                         </div>
                         <div>
-                            <h6 class="text-lg font-semibold">$<span>0</span></h6>
+                            <h6 class="text-lg font-semibold">$<span id="delivery-price">0</span></h6>
                         </div>
-            
+
                     </div>
 
                     <hr class=" mt-2 border-1 border-black">
@@ -94,28 +109,30 @@
                             <h6 class="text-lg font-semibold"> Total price </h6>
                         </div>
                         <div>
-                            <h6 class="text-lg font-semibold">$<span>1299</span></h6>
-                        
-                           </div>
-                           </div>
+                            <h6 class="text-lg font-semibold">$<span id="total-price">1299</span></h6>
 
-                        <p class="my-2 text-base font-medium"> Add promo code</p>
-                        <input class="border border-gray-400 py-1 rounded w-2/3" type="text" id=""  >
-                        <button class=" hover:bg-gray-100 hover:text-red-600  ml-1 py-1 px-3 rounded bg-red-600  text-white border border-gray-400">Apply</button>
+                        </div>
+                    </div>
+
+                    <p class="my-2 text-base font-medium"> Add promo code</p>
+                    <input class="border border-gray-400 py-1 rounded w-2/3" type="text" id="">
+                    <button
+                        class=" hover:bg-gray-100 hover:text-red-600  ml-1 py-1 px-3 rounded bg-red-600  text-white border border-gray-400">Apply</button>
                 </section>
 
             </div>
         </div>
-        <hr class=" mt-8 border-gray-300"> 
+        <hr class=" mt-8 border-gray-300">
     </main>
 
     <!-- footer -->
     <footer class="my-6">
-    
-        <h1 class=" text-center text-4xl font-semibold"> Total:  $<span>1299</span> </h1> 
+
+        <h1 class=" text-center text-4xl font-semibold"> Total: $<span id="final-price">1299</span> </h1>
 
     </footer>
 
+    <script src="custom.js"></script>
 </body>
 
 </html>
