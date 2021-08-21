@@ -1,8 +1,10 @@
+// function definition for calculating total
 function calculateTotal() {
     const total = parseInt(document.getElementById('base-price').innerText) + parseInt(document.getElementById('memory-price').innerText) + parseInt(document.getElementById('storage-price').innerText) + parseInt(document.getElementById('delivery-price').innerText);
     return total;
 }
 
+// function definition to get input value
 function getinput() {
     const inputCoupon = document.getElementById('apply-input').value;
     document.getElementById('apply-input').value = '';
@@ -11,6 +13,7 @@ function getinput() {
 
 }
 
+// function definition to put price in the webpage of different products
 function featurePrice(product, price) {
     document.getElementById(product + '-price').innerText = price;
     const total = calculateTotal();
@@ -21,6 +24,7 @@ function featurePrice(product, price) {
 
 
 document.getElementById('memory-regular').addEventListener('click', function () {
+    // calling function  
     featurePrice('memory', 0);
 });
 
@@ -50,7 +54,7 @@ document.getElementById('delivery-standard').addEventListener('click', function 
 });
 
 
-
+// for getting discount after the coupon code is put
 document.getElementById('discount-btn').addEventListener('click', function () {
 
     const couponInserted = getinput();
@@ -58,9 +62,10 @@ document.getElementById('discount-btn').addEventListener('click', function () {
         const discountPrice = parseInt(document.getElementById('final-price').innerText) * 0.8;
         document.getElementById('final-price').innerText = discountPrice;
         document.getElementById('discount-btn').style.display = 'none';
+    }
 
-
-
+    else {
+        alert("Sorry try again !!");
     }
 
 });
